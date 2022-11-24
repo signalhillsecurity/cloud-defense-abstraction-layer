@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{% block title %} Add or Edit a Technique {% endblock %}</h1>
+<form method="post">
+    <label for="title">Identification</label>
+    <br>
+    <input type="text" name="technique"
+           placeholder="MITRE Technique ID"
+           value="{{ request.form['technique'] }}"></input>
+    <br>
+
+    <br>
+    <input type="text" name="cloud"
+           placeholder="Cloud Provider"
+           value="{{ request.form['cloud'] }}"></input>
+    <br>
+
+    <label for="content">Procedures</label>
+    <br>
+    <textarea name="emulation"
+              placeholder="Emulation Procedure"
+              rows="15"
+              cols="60">{{ request.form['emulation'] }}</textarea>
+    <br>
+    <br>
+    <textarea name="detection"
+              placeholder="Emulation Procedure"
+              rows="15"
+              cols="60">{{ request.form['detection'] }}</textarea>
+    <br>
+    <button type="submit">Submit</button>
+</form>
+{% endblock %}
