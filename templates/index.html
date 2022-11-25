@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{% block title %} Techniques {% endblock %}</h1>
+    {% for message in messages %}
+<div class='message'>
+    <h3>{{ message['cloud'] }} - {{ message['technique'] }}</h3>
+    <p>{{ message['detection'] }}</p>
+    <p>{{ message['emulation'] }}</p>
+</div>
+    {% endfor %}
+{% endblock %}
