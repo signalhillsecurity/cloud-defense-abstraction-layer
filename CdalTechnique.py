@@ -2,8 +2,8 @@ class Technique:
     def __init__(self, technique, cloud, emulation="", detection="") -> None:
         self._technique = technique
         self._cloud = cloud
-        self._emulation = ""
-        self._detection = ""
+        self._emulation = emulation 
+        self._detection = detection
 
     def __repr__(self) -> str:
         return f'Technique(technique="{self._technique}",cloud="{self._cloud}",emulation="{self._emulation}",detection="{self._detection}")'

@@ -2,6 +2,12 @@
 
 {% block content %}
 <h1>{% block title %} Techniques {% endblock %}</h1>
+<select name="technique" width="300px">
+    {% for message in messages %}
+    <option value="{{ message.technique }}_{{ message.cloud}}" SELECTED>{{ message.technique }}_{{ message.cloud}}</option>
+    {% endfor %}
+</select>
+
     {% for message in messages %}
 <div class='message'>
     <h3>{{ message['cloud'] }} - {{ message['technique'] }}</h3>

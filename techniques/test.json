@@ -1,0 +1,6 @@
+{
+  "technique": "T0000",
+  "cloud": "AWS",
+  "detection": "none",
+  "emulation": "none"
+}
