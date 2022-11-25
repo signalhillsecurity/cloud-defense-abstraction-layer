@@ -8,6 +8,9 @@ class Technique:
     def __repr__(self) -> str:
         return f'Technique(technique="{self._technique}",cloud="{self._cloud}",emulation="{self._emulation}",detection="{self._detection}")'
 
+    def __dict__(self) -> str:
+        return {'technique': self._technique, 'cloud': self._cloud, 'emulation': self._emulation, 'detection': self._detection}
+
     ## GETTERS
     @property
     def technique(self):
